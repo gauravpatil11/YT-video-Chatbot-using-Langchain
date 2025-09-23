@@ -1,4 +1,4 @@
-# YouTube Q\&A App with Hugging Face LLM
+# YouTube Videos Insights
 
 An interactive web application that allows users to ask questions about YouTube videos. This app fetches video transcripts, splits them into manageable chunks, creates embeddings for semantic search, and answers user queries using **Hugging Face LLMs**.
 
@@ -75,4 +75,5 @@ Once you've completed the installation, you can run the application.
     ```
 
 2.  **Access the app**:
+
     Open the URL shown in your terminal (usually `http://localhost:8501`) to access the app in your web browser.
