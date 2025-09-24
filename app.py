@@ -12,7 +12,7 @@ from urllib.parse import urlparse, parse_qs
 
 # Hugging Face API Key
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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" 
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_token" 
 
 
 # Streamlit App UI
@@ -121,6 +121,7 @@ if video_url and user_question:
     except Exception as e:
         st.error(f"Unexpected error: {e}")
         
+
 
 
 
