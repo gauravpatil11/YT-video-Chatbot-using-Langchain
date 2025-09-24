@@ -1,5 +1,6 @@
 import os
 import streamlit as st
+from dotenv import load_dotenv  
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings, HuggingFaceEndpoint, ChatHuggingFace
@@ -9,10 +10,9 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough, Runn
 from langchain_core.output_parsers import StrOutputParser
 from urllib.parse import urlparse, parse_qs
 
-
-# Hugging Face API Key
-
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_token" 
+# Load API key from .env file
+load_dotenv()
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 
 # Streamlit App UI
@@ -121,6 +121,7 @@ if video_url and user_question:
     except Exception as e:
         st.error(f"Unexpected error: {e}")
         
+
 
 
 
